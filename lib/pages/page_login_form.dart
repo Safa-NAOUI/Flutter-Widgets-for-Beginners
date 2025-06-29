@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'components/custom_text_field.dart';
+import '../widgets/components/custom_text_field.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});

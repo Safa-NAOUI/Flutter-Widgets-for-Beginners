@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mon_projet/widgets/login_form.dart';
+import 'package:mon_projet/pages/page_login_form.dart';
 import '../widgets/components/custom_button.dart';
 import '../widgets/redirect_link.dart';
-import 'register_page.dart';
+import 'screen_create_account.dart';
 import '../widgets/components/custom_app_bar.dart';
 import '../widgets/components/custom_title.dart';
-import '../pages/remember_forgot_row.dart';
+import '../pages/page_remember_forgot.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
