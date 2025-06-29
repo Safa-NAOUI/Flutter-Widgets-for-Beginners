@@ -52,6 +52,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
               const SizedBox(height: 30),
               CustomButton(text: "Sign In", onPressed: printLogin),
+              const SizedBox(height: 15),
+              CustomButton(text: "Home", onPressed: printLogin),
               const SizedBox(height: 20),
               RedirectLink(
                 prefixText: "New user? Create an account!",
