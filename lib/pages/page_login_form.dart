@@ -11,17 +11,17 @@ class LoginForm extends StatelessWidget {
       children: [
         const CustomTextField(
           label: 'Email',
-          hint: 'email@example.com',
-          keyboardType: TextInputType.emailAddress,
+          hint: 'Enter your email',
+          type: 1,
         ),
 
         const SizedBox(height: 20),
+
         const CustomTextField(
           label: 'Password',
-          hint: 'Password',
-          obscureText: true,
+          hint: 'Enter your password',
+          type: 2,
         ),
-        const SizedBox(height: 30),
       ],
     );
   }

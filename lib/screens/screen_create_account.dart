@@ -21,28 +21,28 @@ class RegisterPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
 
             children: [
-              const SizedBox(height: 40),
-
+              const SizedBox(height: 30),
               CustomTitle(title: 'Create an Account'),
+              const SizedBox(height: 30),
 
-              const SizedBox(height: 60),
-              const CustomTextField(label: 'Name', hint: 'Enter your name'),
-              const SizedBox(height: 20),
-
+              const CustomTextField(
+                label: 'Name',
+                hint: 'Enter your name',
+                type: 3,
+              ),
+              const SizedBox(height: 30),
               const CustomTextField(
                 label: 'Email',
                 hint: 'Enter your email',
-                keyboardType: TextInputType.emailAddress,
+                type: 1,
               ),
-              const SizedBox(height: 20),
-
+              const SizedBox(height: 30),
               const CustomTextField(
                 label: 'Password',
                 hint: 'Enter a password',
-                obscureText: true,
+                type: 2,
               ),
               const SizedBox(height: 30),
-
               RedirectLink(
                 prefixText: "Already have an account? ",
                 linkText: "Sign in",
@@ -57,7 +57,6 @@ class RegisterPage extends StatelessWidget {
             ],
           ),
         ),
-        // ),
       ),
     );
   }
