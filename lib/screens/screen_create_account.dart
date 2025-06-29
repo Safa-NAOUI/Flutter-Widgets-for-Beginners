@@ -47,17 +47,13 @@ class RegisterPage extends StatelessWidget {
                 prefixText: "Already have an account? ",
                 linkText: "Sign in",
                 onTap: () {
-                  Navigator.pop(context); 
+                  Navigator.pop(context);
                   print("Go to the login page");
                 },
               ),
               const SizedBox(height: 30),
 
-              CustomButton(
-                text: "Submit",
-                onPressed: () {
-                },
-              ),
+              CustomButton(text: "Submit", onPressed: () {}),
             ],
           ),
         ),
