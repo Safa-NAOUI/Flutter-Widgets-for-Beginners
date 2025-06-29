@@ -1,4 +1,3 @@
-# Common build/artifacts
 *.class
 *.lock
 *.log
@@ -13,7 +12,7 @@
 .swiftpm/
 migrate_working_dir/
 
-# Flutter-specific
+
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
@@ -26,7 +25,7 @@ coverage/
 **/doc/api/
 **/generated_plugin_registrant.dart
 
-# Android
+
 .gradle/
 **/android/**/gradle-wrapper.jar
 **/android/captures/
@@ -36,34 +35,34 @@ coverage/
 **/android/key.properties
 *.jks
 
-# iOS / macOS
+
 **/ios/**/Pods/
 **/ios/**/DerivedData/
-**/ios/**/xcuserdata
+**/ios/**/xcuserdata/
 **/ios/Flutter/ephemeral/
 **/ios/Flutter/*.framework
 **/ios/Flutter/*.xcconfig
 **/ios/Flutter/*.sh
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Gemfile
+**/ios/Gemfile.lock
+
 **/macos/Flutter/ephemeral/
 **/macos/Flutter/GeneratedPluginRegistrant.swift
-**/xcuserdata/
+**/macos/**/xcuserdata/
 
-# Windows / Linux
 **/windows/flutter/generated_*.*
 **/linux/flutter/generated_*.*
 **/*/flutter/generated_plugins.cmake
 
-# IDEs
+
 .idea/
 *.iml
 *.ipr
 *.iws
 
-# VS Code
-#.vscode/
+.vscode/
 
-# Symbol / obfuscation
 app.*.symbols
 app.*.map.json
