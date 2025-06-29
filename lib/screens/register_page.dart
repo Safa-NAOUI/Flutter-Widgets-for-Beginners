@@ -23,40 +23,39 @@ class RegisterPage extends StatelessWidget {
             children: [
               const SizedBox(height: 40),
 
-              CustomTitle(title: 'Créer un compte'),
+              CustomTitle(title: 'Create an Account'),
 
               const SizedBox(height: 60),
-              const CustomTextField(label: 'Nom', hint: 'Entrez votre nom'),
+              const CustomTextField(label: 'Name', hint: 'Enter your name'),
               const SizedBox(height: 20),
 
               const CustomTextField(
                 label: 'Email',
-                hint: 'Entrez votre email',
+                hint: 'Enter your email',
                 keyboardType: TextInputType.emailAddress,
               ),
               const SizedBox(height: 20),
 
               const CustomTextField(
-                label: 'Mot de passe',
-                hint: 'Entrez un mot de passe',
+                label: 'Password',
+                hint: 'Enter a password',
                 obscureText: true,
               ),
               const SizedBox(height: 30),
 
               RedirectLink(
-                prefixText: "Déjà inscrit ? ",
-                linkText: "Se connecter",
+                prefixText: "Already have an account? ",
+                linkText: "Sign in",
                 onTap: () {
-                  Navigator.pop(context); // Revenir à LoginPage
-                  print("Aller à la page de connexion");
+                  Navigator.pop(context); 
+                  print("Go to the login page");
                 },
               ),
               const SizedBox(height: 30),
 
               CustomButton(
-                text: "Créer un compte",
+                text: "Submit",
                 onPressed: () {
-                  print("Création du compte...");
                 },
               ),
             ],
