@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mon_projet/pages/page_login_form.dart';
+import 'package:mon_projet/screens/home_screen.dart';
 import '../widgets/components/custom_button.dart';
 import '../widgets/redirect_link.dart';
 import 'screen_create_account.dart';
@@ -37,6 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 40),
               LoginForm(),
               const SizedBox(height: 25),
+
               /// Row containing "Remember me" and "Forgot Password?"
               RememberForgotRow(
                 rememberMe: _rememberMe,
@@ -53,7 +55,15 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 30),
               CustomButton(text: "Sign In", onPressed: printLogin),
               const SizedBox(height: 15),
-              CustomButton(text: "Home", onPressed: printLogin),
+              CustomButton(
+                text: "Home",
+                onPressed: () {
+               Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => HomeScreen()),
+                  );
+                },
+              ),
               const SizedBox(height: 20),
               RedirectLink(
                 prefixText: "New user? Create an account!",
