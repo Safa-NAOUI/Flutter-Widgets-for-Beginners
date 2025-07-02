@@ -38,7 +38,6 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 40),
               LoginForm(),
               const SizedBox(height: 25),
-
               /// Row containing "Remember me" and "Forgot Password?"
               RememberForgotRow(
                 rememberMe: _rememberMe,
@@ -51,16 +50,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   print("Forgot password tapped");
                 },
               ),
-
               const SizedBox(height: 30),
-              CustomButton(text: "Sign In", onPressed: printLogin),
               const SizedBox(height: 15),
               CustomButton(
                 text: "Home",
                 onPressed: () {
-               Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => HomeScreen()),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
                   );
                 },
               ),

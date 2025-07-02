@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+
 class CustomTextField extends StatefulWidget {
   final String label;
   final String hint;
   final int type; // 1 = email, 2 = password, 3 = text
+  final TextEditingController? controller;
 
   const CustomTextField({
     super.key,
     required this.label,
     required this.hint,
     required this.type,
+    this.controller,
   });
 
   @override
@@ -33,7 +37,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
         return TextInputType.emailAddress;
       case 2:
       case 3:
-        return TextInputType.text;
       default:
         return TextInputType.text;
     }
@@ -45,11 +48,26 @@ class _CustomTextFieldState extends State<CustomTextField> {
     });
   }
 
+  String? _validator(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Ce champ est obligatoire';
+    }
+    if (widget.type == 1) {
+      final emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+      if (!emailRegex.hasMatch(value)) {
+        return 'Adresse e-mail invalide';
+      }
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      controller: widget.controller,
       obscureText: _obscureText,
       keyboardType: _keyboardType,
+      validator: _validator,
       decoration: InputDecoration(
         border: const OutlineInputBorder(),
         labelText: widget.label,
